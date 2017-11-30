@@ -1,1 +1,1 @@
-delete all files
+delete all files.
