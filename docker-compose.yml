@@ -6,9 +6,11 @@ web:
   links:
     - postgres:postgres
     - redis:redis
+    - ipfs:ipfs
   env_file: env
   volumes:
     - ./web:/data/web
+    - ./ipfs/ssh:/root/.ssh
   command: /usr/bin/gunicorn sljweb.wsgi:application -w 2 -b :8000
 
 nginx:
@@ -39,6 +41,20 @@ redis:
   image: redis:latest
   expose:
     - "6379"
+
+ipfs:
+  restart: always
+  image: ipfs/go-ipfs:k
+  volumes:
+    - ./ipfs/export:/export
+    - ./ipfs/data:/data/ipfs
+    - ./ipfs/ssh:/root/.ssh
+  ports:
+    - "4001:4001"
+    - "127.0.0.1:8080:8080"
+    - "127.0.0.1:5001:5001"
+  expose:
+    - "22"
 
 data:
   restart: always
