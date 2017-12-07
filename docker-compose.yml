@@ -10,6 +10,7 @@ web:
   env_file: env
   volumes:
     - ./web:/data/web
+    - ./ipfs/export:/mnt
     - ./ipfs/ssh:/root/.ssh
   command: /usr/bin/gunicorn sljweb.wsgi:application -w 2 -b :8000
 
@@ -33,6 +34,8 @@ postgres:
     - ./backups/postgresql:/backup
   env_file:
     - env
+  ports:
+    - "12345:5432"
   expose:
     - "5432"
 
