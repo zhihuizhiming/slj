@@ -13,7 +13,7 @@ class mySpider(scrapy.Spider):
     name = "myspider"
 
     def start_requests(self):
-        for i in range(802,7090):
+        for i in range(2686,7090):
             url='http://youzan6.com/post/%s.html' % i
             time.sleep(3)
             yield scrapy.Request(url=url, callback=self.parse)
