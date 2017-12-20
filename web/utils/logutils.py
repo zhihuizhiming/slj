@@ -19,10 +19,6 @@ import time
 
 LOG_HOME="/data/web/log/slj"
 
-reload(sys)
-sys.setdefaultencoding('utf8')
-
-
 FOMMATER = '[%(asctime)s](%(levelname)s) {pid:%(process)d, tid:%(thread)d, %(filename)s}, %(module)s.%(funcName)s %(lineno)d: %(message)s'
 
 def getLogger(singleOrmodule, logfile, pscr = False, interval = 180):
@@ -199,7 +195,7 @@ if __name__ == '__main__':
     try:
         logger.info("dir right")
         logger.info("logger2 info exception")
-        logger.info()
+        logger.info("")
     except Exception as e:
         logger.debug('This is a debug info')
         logger.exception(e)
