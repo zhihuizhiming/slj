@@ -1,0 +1,91 @@
+@charset "utf-8";
+body {font-family: Arial;font-size: 12px;color: #333;background-color: #FFF;margin: 0;}
+img {border: none;}
+em,i {font-style: normal;}
+a {color: #333;text-decoration: none;}
+a:hover {color: #F16EA2;text-decoration: none;}
+ul,dl,dt,dd,h1,h2,h3,p,form,input {font-weight: normal;margin: 0;padding: 0;list-style-type: none;}
+li,dt,dd {display: inline;float: left;}
+.topbar {background: url(http://www.92mn.bid/static/images/bg.gif) repeat-x left 91px;height: 160px;width: 100%;}
+.header {height: 91px;width: 1082px;margin: 0 auto;}
+.header h1 {font-size: 12px;font-weight: normal;color: #666;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat left -67px;float: left;height: 24px;width: 180px;padding-top: 54px;padding-top: 56px\9;}
+.header h1 a {color: #666;}
+.header h1 a:hover {color: #666;text-decoration: none;}
+.nav {height: 35px;width: 1082px;margin: 0 auto;}
+.nav a {font-size: 14px;color: #FFF;display: inline;float: left;height: 22px;width: 30px;margin-right: 18px;padding-top: 10px;padding-top: 11px\9;}
+.nav a:hover {color: #FBD4E3;}
+.nav a.hot {width: 72px;}
+.nav a.good {width: 58px;}
+.nav a.mobile {font-size: 12px;text-align: right;float: right;height: 20px;width: 38px;margin-right: 0;padding-top: 10px;padding-top: 12px\9;}
+.nav i {color: #FFF;text-align: right;float: right;height: 20px;width: 280px;padding-top: 10px;padding-top: 12px\9;}
+.subnav {height: 31px;width: 1082px;margin: 0 auto;}
+.subnav span,.subnav a {color: #666;display: inline-block;height: 20px;margin-top: 3px;margin-right: 12px;padding-top: 5px;}
+.subnav span {color: #999;}
+.subnav a:hover {color: #F16EA2;text-decoration: none;}
+.main {width: 1082px;margin: 10px auto 0 auto;}
+.article {float: left;width: 820px;border: 1px solid #EEE;}
+.article h2 {font-size: 18px;text-align: center;height: 32px;width: 820px;margin: 20px auto 0 auto;}
+.article .info {color: #777;text-align: center;height: 35px;width: 820px;margin: 0 auto;}
+.article .info i {display: inline-block;margin-right: 7px;}
+.article i.viewall {cursor: pointer;}
+.article i.viewall:hover {color: #F16EA2;}
+.article i.on {color: #F16EA2;}
+.article i.like {background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -162px -309px;background-position: -162px -311px\9;padding-left: 16px;cursor: pointer;}
+.article i.like:hover {color: #F75555;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -162px -343px;background-position: -162px -345px\9;}
+.article .content {text-align: center;width: 820px;margin: 0 auto;}
+.article .content img {display: block;margin: 0px auto 10px auto;}
+.page {text-align: center;height: 57px;width: 820px;}
+.page a,.page em,.page i {text-align: center;vertical-align: top;display: inline-block;margin-top: 10px;margin-left: 5px;}
+.page a,.page em {color: #333;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -156px -149px;height: 21px;width: 27px;padding-top: 6px;}
+.page a:hover {color: #999;text-decoration: none;background-position: -156px -177px;}
+.page .ch {text-align: left;height: 21px;height: 19px\9;padding-top: 6px;padding-top: 8px\9;}
+.page .pre {background-position: left -205px;width: 43px;padding-left: 19px;}
+.page .pre:hover {background-position: left -233px;}
+.page .preno {color: #999;background-position: left -261px;width: 43px;padding-left: 19px;}
+.page .next {background-position: -63px -205px;width: 54px;padding-left: 8px;}
+.page .next:hover {background-position: -63px -233px;}
+.page .nextno {color: #999;background-position: -63px -261px;width: 54px;padding-left: 8px;}
+.page em {color: #999;background-position: -156px -177px;}
+.page em.all {color: #333;background-position: -126px -205px;width: 55px;padding-left: 8px;cursor: pointer;}
+.page em.all:hover,.page em.on {color: #999;background-position: -126px -233px;}
+.page i {background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -132px -261px;height: 27px;width: 11px;}
+.article .other {height: 51px;width: 800px;margin: 0 auto;border-top: 1px dashed #EEE;}
+.article .tags {color: #666;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -107px -366px;float: left;height: 23px;width: 650px;padding-top: 20px;padding-left: 19px;}
+.article .tags a {color: #666;display: inline-block;margin-right: 6px;}
+.article .tags a:hover {color: #F16EA2;}
+.article .share {background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat left -375px;float: right;height: 24px;width: 106px;margin-top: 18px;}
+.article .share span {float: left;height: 18px;width: 45px;padding-top: 3px;padding-top: 4px\9;padding-left: 15px;}
+.article .share i {float: left;height: 16px;width: 16px;margin-right: 6px;cursor: pointer;}
+.article .hot {height: 669px;width: 820px;margin: 0 auto;}
+.article .hot dl {font-family: "SimSun", Arial;width: 820px;}
+.article .hot dt {font-weight: bold;color: #F16EA2;height: 31px;width: 800px;padding-left: 12px;}
+.article .hot dd {text-align: center;height: 316px;width: 200px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.article .hot dd.left {margin-left: 10px;}
+.article .hot dd img {display: block;margin-bottom: 13px;margin-bottom: 14px\9;margin-left: 9px;}
+.showmore {height: 49px;width: 724px;margin: 0 auto;}
+.showmore span {color: #FFF;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat left -315px; text-align: center;display: inline;float: left;height: 22px;height: 20px\9;width: 103px;margin-left: 310px;padding-top: 7px;padding-top: 9px\9;cursor: pointer;}
+.showmore span:hover {background-position: left -345px;}
+.sidebar {float: right;width: 255px;}
+.search {float: right;height: 29px;width: 248px;border: 1px solid #EEE;}
+.search input {font-size: 12px;line-height: 21px;color: #999;background-color: transparent;display: inline;float: left;height: 21px;width: 190px;margin-top: 4px;margin-top: 5px\9;margin-left: 6px;border: none;outline: none;}
+.search span {background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -104px -315px;float: right;height: 29px;width: 44px;cursor: pointer;}
+.sidebar .top {float: right;height: 234px;width: 250px;}
+.sidebar dt {color: #F16EA2;height: 23px;height: 21px\9;width: 250px;margin-bottom: 12px;padding-top: 2px\9;border-bottom: 1px dotted #E4E4E4;}
+.sidebar .top dt {padding-top: 18px;padding-top: 20px\9;}
+.sidebar .top dd {height: 86px;width: 87px;}
+.sidebar .top dd.right {width: 76px;}
+.sidebar .hot {float: right;height: 273px;width: 250px;}
+.sidebar .hot dt {margin-bottom: 11px;margin-bottom: 12px\9;}
+.sidebar .hot dd {font-family: "SimSun", Arial;background: url(http://www.92mn.bid/static/images/bg.gif) no-repeat -149px -265px;background-position: -149px -266px\9;height: 23px;width: 235px;padding-left: 14px;}
+.sidebar .like {float: right;height: 480px;width: 250px;}
+.sidebar .like dd {height: 86px;width: 249px;}
+.sidebar .like img {float: left;height: 76px;width: 76px;margin-right: 10px;}
+.sidebar .like span {line-height: 21px;color: #999;float: left;height: 74px;width: 162px;}
+.baidu250 {display: none;float: right;height: 270px;width: 250px;}
+.clearfloat {height: 20px;clear: both;}
+.footer {background-color: #FCFCFC;height: 72px;width: 100%;border-top: 1px solid #EEE;}
+.footer p {color: #666;height: 71px;width: 1082px;margin: 0 auto;}
+.footer span {line-height: 25px;text-align: center;float: left;height: 50px;width: 1082px;margin-top: 11px;margin-top: 12px\9;}
+.footer a {color: #666;}
+.footer a:hover {color: #F16EA2;text-decoration: none;}
+.union {height: 80px;width: 640px;margin: 0 auto;}
