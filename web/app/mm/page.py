@@ -18,7 +18,23 @@ def multiple_replace(text, adict):
         return adict[match.group(0)]
     return rx.sub(one_xlat, text)
 
-def get_page(pid):
+def get_em(pid, id, leng):
+    try:
+        em = ''
+        num = (leng + 1) if leng <= (id + 3) else (id + 3)
+        min_num = 1 if id <= 3 else (id - 2)
+        for i in range(min_num, num):
+            if i == id:
+                em += '<em>' + str(i) + '</em>'
+            else:
+                em += '<a href="/mm/' + str(pid) + '/' + str(i) + '">' + str(i) + '</a>'
+        if num <= (leng - 1):
+            em += '<i></i><a href="/mm/' + str(pid) + '/' + str(leng) + '">' + str(leng) + '</a>'
+        return em
+    except Exception as e:
+        Log.error("ERROR: %s", e)
+
+def get_page(pid, id=1):
     db = DbQuery()
     try:
         db.connect()
@@ -33,16 +49,21 @@ def get_page(pid):
             leng = len(img_list)
             likes = ret [4]
             visit = ret[5]
+            imgsrc = img_list[int(id) - 1]
+            em = get_em(pid, int(id), leng)
+            Log.debug('em: %s', em)
+            next_num = (int(id) + 1) if (int(id) + 1) < leng else leng
             html_dict = {
                 '{TITLE}': title,
                 '{PICINFO}': '[2015, '+ str(pid) + ', ' + str(leng)+']',
                 '{TIME}': ptime,
                 '{LIKE}': str(likes),
                 '{VISIT}': str(visit),
-                '{IMGSRC}': '/ip/'+img_list[0],
-                '{HREF}': '/mm/'+ str(pid) + '/2',
+                '{IMGSRC}': '/ip/'+imgsrc,
+                '{HREF}': '/mm/'+ str(pid) + '/' + str(next_num),
                 '{PRE}': '/mm/' + str(int(pid) - 1),
-                '{NEXT}': '/mm/' + str(int(pid) + 1),
+                '{EM}': em,
+                '{NEXT}': '/mm/' + str(pid) + '/' + str(next_num),
                 '{IMGLIST}': str(img_list)
             }
             html = open('/data/web/static/html/test.html', 'rb').read()
