@@ -55,15 +55,17 @@ def get_page(pid, id=1):
             next_num = (int(id) + 1) if (int(id) + 1) < leng else leng
             html_dict = {
                 '{TITLE}': title,
-                '{PICINFO}': '[2015, '+ str(pid) + ', ' + str(leng)+']',
+                '{PICINFO}': '[2015, '+ str(id) + ', ' + str(leng)+']',
                 '{TIME}': ptime,
+                '{PPID}': str(id),
                 '{LIKE}': str(likes),
                 '{VISIT}': str(visit),
-                '{IMGSRC}': '/ip/'+imgsrc,
+                '{IMGSRC}': '/img/'+imgsrc,
                 '{HREF}': '/mm/'+ str(pid) + '/' + str(next_num),
                 '{PRE}': '/mm/' + str(int(pid) - 1),
                 '{EM}': em,
-                '{NEXT}': '/mm/' + str(pid) + '/' + str(next_num),
+                '{NEXT}': '/mm/' + str(int(pid) + 1),
+                #'{NEXT}': '/mm/' + str(pid) + '/' + str(next_num),
                 '{IMGLIST}': str(img_list)
             }
             html = open('/data/web/static/html/test.html', 'rb').read()

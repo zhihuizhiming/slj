@@ -1,7 +1,26 @@
+upstream backend {
+    server 138.197.98.10;
+    server 151.80.37.202;
+    server 173.230.146.39;
+    server 5.196.67.126; 
+}
 server {
+    listen *:80;
+    server_name img.92mn.bid;
+    charset utf-8;
 
-    listen 80;
-    server_name not.configured.example.com;
+    location / {
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+}
+
+server {
+    listen *:80;
+    server_name www.92mn.bid m.92mn.bid;
     charset utf-8;
 
     location /static {
@@ -16,3 +35,4 @@ server {
     }
 
 }
+

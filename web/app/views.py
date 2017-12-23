@@ -31,7 +31,7 @@ def getPage(request, pid):
 def getPagePic(request, pid, id):
     try:
         Logger.debug("page id:%s, pic id: %s", pid, id)
-        html = get_page(pid)
+        html = get_page(pid, id)
         return HttpResponse(html, content_type='text/html')
     except Exception as e:
         raise e

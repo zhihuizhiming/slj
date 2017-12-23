@@ -94,7 +94,7 @@ function moreback(){
 //浏览图片
 function openall(pid){
    var showall = '';
-   var imgurl = '<img src="http://m.92mn.bid/ip/';
+   var imgurl = '<img src="/img/';
    if(viewall == 1){
       if(pid != picinfo[2]){
          for(var p=pid;p<picinfo[2];p++){showall = showall+imgurl+imglist[p]+'" />';}
